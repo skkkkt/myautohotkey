@@ -31,13 +31,13 @@ vk1D & u::Send, {Blind}{Up 4}
 vk1D & ,::Send, {Blind}{Down 4}
 
 ; →→→→
-vk1D & .::Send, {Blind}{Right 4}
+vk1D & .::Send, {Blind}^{Right}
 
 ; ←←←←
-vk1D & m::Send, {Blind}{Left 4}
-
+vk1D & m::Send, {Blind}^{Left}
 ; Enter
 vk1D & Space::Send, {Blind}{Enter}
+
 
 ; Backspace
 vk1D & n::Send, {Blind}{Backspace}
