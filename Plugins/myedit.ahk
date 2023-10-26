@@ -1,6 +1,4 @@
-﻿; 英数キー無効
-vkF0::Return
-; ↑
+﻿; ↑
 vk1D & i::Send, {Blind}{Up}
 
 ; ↓
@@ -58,6 +56,8 @@ vk1D & Enter::
     Send, {End}{Enter}
   }
 Return
+
+
 
 ; ; 半角英数
 ; vk1D & vkF2::Send, {vkF2}{vkF3}
