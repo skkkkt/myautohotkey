@@ -38,6 +38,11 @@ vk1D & m::Send, {Blind}^{Left}
 ; Enter
 vk1D & Space::Send, {Blind}{Enter}
 
+; OneNoteへ入力する時だけに適用される設定
+#IfWinActive, ahk_class Framework::CFrame
+    vk1D & i::dllcall("keybd_event", int, 0x26, int, 0, int, 1, int, 0) ;Up
+    vk1D & k::dllcall("keybd_event", int, 0x28, int, 0, int, 1, int, 0) ;Down
+#IfWinActive
 
 ; Backspace
 vk1D & n::Send, {Blind}{Backspace}
@@ -54,12 +59,14 @@ vk1D & Enter::
   }
 Return
 
-; 半角英数
-vk1D & vkF2::Send, {vkF2}{vkF3}
+; ; 半角英数
+; vk1D & vkF2::Send, {vkF2}{vkF3}
 
-; 矢印入力
-vk1D & Up::Send, {vkF2}{vkF3}↑{vkF2}
-vk1D & Down::Send, {vkF2}{vkF3}↓{vkF2}
-vk1D & Left::Send, {vkF2}{vkF3}←{vkF2}
-vk1D & Right::Send, {vkF2}{vkF3}→{vkF2}
+; ; 矢印入力
+; vk1D & Up::Send, {vkF2}{vkF3}↑{vkF2}
+; vk1D & Down::Send, {vkF2}{vkF3}↓{vkF2}
+; vk1D & Left::Send, {vkF2}{vkF3}←{vkF2}
+; vk1D & Right::Send, {vkF2}{vkF3}→{vkF2}
+
+
 
