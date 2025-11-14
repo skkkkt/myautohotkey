@@ -94,6 +94,10 @@ vk1D & s::
   }
 Return
 
+; CapsLock + Backspace で2文字ずつ削除
+CapsLock & Backspace::
+    Send, {Blind}{Backspace 2}
+Return
 
 
 
